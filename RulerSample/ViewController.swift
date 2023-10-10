@@ -73,7 +73,7 @@ class ViewController: UIViewController, RKMultiUnitRulerDataSource, RKMultiUnitR
     
     func styleForUnit(_ unit: Dimension) -> RKSegmentUnitControlStyle {
         let style: RKSegmentUnitControlStyle = RKSegmentUnitControlStyle()
-        style.scrollViewBackgroundColor = UIColor(red: 0.44, green: 0.44, blue: 0.44, alpha: 1.0)
+        //style.scrollViewBackgroundColor = UIColor(red: 0.44, green: 0.44, blue: 0.44, alpha: 1.0)
         let range = self.rangeForUnit(unit)
         if unit == UnitMass.pounds {
 

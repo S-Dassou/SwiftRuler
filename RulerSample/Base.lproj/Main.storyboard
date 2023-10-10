@@ -18,26 +18,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qUb-vH-9P6" customClass="RKMultiUnitRuler" customModule="RulerSample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="346" width="393" height="160"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd0-aI-RWT">
-                                        <rect key="frame" x="191.66666666666666" y="0.0" width="10" height="160"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="10" id="49k-uf-qG4"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="yd0-aI-RWT" secondAttribute="bottom" id="Ekt-FZ-AsC"/>
-                                    <constraint firstItem="yd0-aI-RWT" firstAttribute="centerX" secondItem="qUb-vH-9P6" secondAttribute="centerX" id="Y3v-WR-5wB"/>
-                                    <constraint firstItem="yd0-aI-RWT" firstAttribute="top" secondItem="qUb-vH-9P6" secondAttribute="top" id="eC8-HY-782"/>
                                     <constraint firstAttribute="height" constant="160" id="xH5-Xf-3OL"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qUb-vH-9P6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6JA-vC-bfK"/>
                             <constraint firstItem="qUb-vH-9P6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IyD-Va-vMn"/>
@@ -56,9 +44,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

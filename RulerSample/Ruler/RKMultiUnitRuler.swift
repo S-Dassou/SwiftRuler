@@ -143,7 +143,7 @@ public class RKMultiUnitRuler: UIView {
                             metrics: nil,
                             views: ["segmentView": segmentView])
                     constraints += NSLayoutConstraint.constraints(
-                            withVisualFormat: "V:|-5-[segmentControl]-5-[segmentView]-5-|",
+                            withVisualFormat: "V:|-5-[segmentView]-5-[segmentControl]-5-|",
                             options: NSLayoutConstraint.FormatOptions.directionLeadingToTrailing,
                             metrics: nil,
                             views: ["segmentView": segmentView, "segmentControl": segmentControl])
@@ -166,7 +166,6 @@ public class RKMultiUnitRuler: UIView {
                             metrics: nil,
                             views: ["segmentView": segmentView, "segmentControl": segmentControl])
                 }
-
             }
             segmentControl.addTarget(self,
                     action: #selector(RKMultiUnitRuler.segmentSelectionChanged(_:)),
@@ -176,7 +175,7 @@ public class RKMultiUnitRuler: UIView {
             
             let middleLineView = UIView()
             middleLineView.backgroundColor = UIColor.systemOrange
-            middleLineView.frame = CGRect(x: (frame.width / 2) - 2, y: 0, width: 4, height: frame.height)
+            middleLineView.frame = CGRect(x: (frame.width / 2) - 1.5, y: 32, width: 3, height: (frame.height - 32) / 2)
             addSubview(middleLineView)
         }
     }
@@ -376,7 +375,7 @@ public class RKMultiUnitRuler: UIView {
                                 metrics: nil,
                                 views: segmentSubViews)
                         constraints += NSLayoutConstraint.constraints(
-                                withVisualFormat: "V:|-5-[pointerView(10)]-0-[scrollView]-5-[textView(25)]-1-[underlineView(2)]-5-|",
+                                withVisualFormat: "V:|-5-[textView(25)]-0-[scrollView]-5-[pointerView(0)]-1-[underlineView(0)]-5-|",
                                 options: NSLayoutConstraint.FormatOptions.directionLeadingToTrailing,
                                 metrics: nil,
                                 views: segmentSubViews)
@@ -414,7 +413,8 @@ public class RKMultiUnitRuler: UIView {
                                         range floatRange: RKRange<Float>) -> RKRangeScrollView {
         let scrollView = RKRangeScrollView(frame: self.bounds)
         scrollView.markerTypes = segmentUnit.markerTypes
-        scrollView.backgroundColor = style.scrollViewBackgroundColor
+        //scrollView.backgroundColor = style.scrollViewBackgroundColor
+        scrollView.backgroundColor = UIColor(named: "rulerGray")
         scrollView.range = floatRange
         scrollView.colorOverrides = style.colorOverrides
         scrollView.direction = self.direction
