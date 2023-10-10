@@ -35,17 +35,17 @@ class ViewController: UIViewController, RKMultiUnitRulerDataSource, RKMultiUnitR
         let formatter = MeasurementFormatter()
         formatter.unitStyle = .medium
         formatter.unitOptions = .providedUnit
-        let kgSegment = RKSegmentUnit(name: "CMs", unit: UnitLength.centimeters, formatter: formatter)
+        let kgSegment = RKSegmentUnit(name: "CM", unit: UnitLength.centimeters, formatter: formatter)
 
-        kgSegment.name = "CMs"
+        kgSegment.name = "CM"
         kgSegment.unit = UnitLength.centimeters
         let kgMarkerTypeMax = RKRangeMarkerType(color: UIColor.white, size: CGSize(width: 1.0, height: 50.0), scale: 5.0)
         kgMarkerTypeMax.labelVisible = true
         kgSegment.markerTypes = [
-            RKRangeMarkerType(color: UIColor.white, size: CGSize(width: 1.0, height: 35.0), scale: 0.5),
-            RKRangeMarkerType(color: UIColor.white, size: CGSize(width: 1.0, height: 50.0), scale: 1.0)]
+            RKRangeMarkerType(color: UIColor.white, size: CGSize(width: 1.0, height: 35.0), scale: 1.0),
+            RKRangeMarkerType(color: UIColor.white, size: CGSize(width: 1.0, height: 50.0), scale: 10.0)]
 
-        let lbsSegment = RKSegmentUnit(name: "Feet", unit: UnitLength.feet, formatter: formatter)
+        let lbsSegment = RKSegmentUnit(name: "FT", unit: UnitLength.feet, formatter: formatter)
         let lbsMarkerTypeMax = RKRangeMarkerType(color: UIColor.white, size: CGSize(width: 1.0, height: 50.0), scale: 5.0)
 
         lbsSegment.markerTypes = [
