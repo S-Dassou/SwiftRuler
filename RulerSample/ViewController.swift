@@ -12,7 +12,7 @@ class ViewController: UIViewController, RKMultiUnitRulerDataSource, RKMultiUnitR
     @IBOutlet weak var ruler: RKMultiUnitRuler!
     
     var rangeStart = Measurement(value: 60.0, unit: UnitLength.centimeters)
-    var rangeLength = Measurement(value: Double(150), unit: UnitLength.centimeters)
+    var rangeLength = Measurement(value: Double(170), unit: UnitLength.centimeters)
     var direction: RKLayerDirection = .horizontal
     var segments = Array<RKSegmentUnit>()
     var numberOfSegments: Int {
@@ -51,7 +51,6 @@ class ViewController: UIViewController, RKMultiUnitRulerDataSource, RKMultiUnitR
         lbsSegment.markerTypes = [
             RKRangeMarkerType(color: UIColor.white, size: CGSize(width: 1.0, height: 35.0), scale: 0.1),
             RKRangeMarkerType(color: UIColor.white, size: CGSize(width: 1.0, height: 50.0), scale: 1.0)
-        
         ]
 
         kgSegment.markerTypes.last?.labelVisible = true
